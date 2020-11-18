@@ -50,7 +50,7 @@ class App extends Component {
         return timeDisplay ;
     }
     padNumberToString (num){
-            return `${num > 10 ?"0":""}${num}` ;
+            return `${num < 10 ?"0":""}${num}` ;
     };
 }
 
