@@ -42,13 +42,16 @@ class App extends Component {
 
         const twelveHourSys = hours>12 ? hours-12 : hours ;
 
-        const hourString = padNumberToString(twelveHourSys) ;
-        const minuteString = padNumberToString(minutes) ;
-        const secondsString = padNumberToString(seconds) ;
+        const hourString = this.padNumberToString(twelveHourSys) ;
+        const minuteString = this.padNumberToString(minutes) ;
+        const secondsString = this.padNumberToString(seconds) ;
 
         const timeDisplay = `${hourString}:${minuteString}:${secondsString} ${amPm}` ;
         return timeDisplay ;
     }
+    padNumberToString (num){
+            return `${num > 10 ?"0":""}${num}` ;
+    };
 }
 
 
